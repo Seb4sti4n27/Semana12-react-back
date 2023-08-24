@@ -1,7 +1,7 @@
 const React = require('react');
 const client = require('../client');
-const { Link } = require('react-router-dom');
-const { Module } = require('webpack');
+const {Link } = require('react-router-dom');
+
 
 class HomePage extends React.Component {
 	constructor(props) {

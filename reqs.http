@@ -1,4 +1,4 @@
-@server = https://friendly-bassoon-5676pr7jvgx37rv4-8080.app.github.dev
+@server = https://stunning-dollop-5676pr7jgrvcp6pg-8080.app.github.dev
 ###
 GET {{server}}/api/instrumentos/2
 ###
@@ -17,6 +17,7 @@ Content-Type: application/json
 
 ###
 GET {{server}}/api/bandas
+
 ###
 GET {{server}}/api/bandas/1
 ###
