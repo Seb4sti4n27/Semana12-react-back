@@ -1,6 +1,7 @@
 const React = require('react');
-const { useParams } = require('react-router-dom');
-const client = require('rest/client');
+const {useState, useEffect} = require('react');
+const { Link, useParams } = require('react-router-dom');
+const client = require('../client');
 
 
 const EditarInstrumentoPage=()=>{

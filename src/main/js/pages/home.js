@@ -6,6 +6,7 @@ class HomePage extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { instrumentos: [], musicos: [] };
+		this.state = { instrumentos: [], musicos: [], bandas: [] };
 	}
 	componentDidMount() {
 
@@ -16,12 +17,15 @@ class HomePage extends React.Component {
 		client({ method: 'GET', path: '/api/musicos' }).done(response => {
 			this.setState({ musicos: response.entity._embedded.musicos });
 		});
+		client({ method: 'GET', path: '/api/bandas' }).done(response => {
+			this.setState({ bandas: response.entity._embedded.bandas });
+		});
 
 	}
 	render() {
 		return (
 			<>
-				<h1>Semana 12 App (componente: HomePage)</h1>
+				<h1>Semana 13 App (componente: HomePage)</h1>
 				<Titulo entidad="Intrumentos" emoji="🎸" />
 				<InstrumentoList instrumentos={this.state.instrumentos} />
 				<Link to="/nuevo-instrumento">Nuevo Instrumento</Link>
@@ -91,7 +95,7 @@ class Instrumento extends React.Component {
 				<td>{this.props.instrumento.nombre}</td>
 				<td>{this.props.instrumento.categoria}</td>
 				<td>
-					<Link to={"/ver-instrumento/" + id}>Ver</Link>
+					<Link to={"/ver-instrumento/" + id}>Ver</Link> |
 					<Link to={"/editar-instrumento/" + id}>Editar</Link>
 				</td>
 			</tr>
