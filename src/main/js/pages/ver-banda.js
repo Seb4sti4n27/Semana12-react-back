@@ -54,8 +54,8 @@ const VerBandaPage = () => {
                             </tr>
                         )
                     })}
-
                 </tbody>
+                
             </table>
                     
             <hr />
